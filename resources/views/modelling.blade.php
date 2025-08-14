@@ -46,9 +46,9 @@
                                 <thead>
                                     <tr>
                                         <th class="">Model Name</th>
-                                        <th class="">Positive Sentiment</th>
+                                        <th class="">Positif Sentiment</th>
                                         <th class="">Netral Sentiment</th>
-                                        <th class="">Negative Sentiment</th>
+                                        <th class="">Negatif Sentiment</th>
                                         <th class="">Total Sentiment</th>
                                         <th class="">Action</th>
                                     </tr>
@@ -57,9 +57,9 @@
                                     @foreach ($modellings as $data)
                                         <tr>
                                             <td class="">{{ $data->model_name }}</td>
-                                            <td class="">{{ $data->positive_labels }}</td>
-                                            <td class="">{{ $data->netral_labels }}</td>
-                                            <td class="">{{ $data->negative_labels }}</td>
+                                            <td class="">{{ $data->positif_sentiment }}</td>
+                                            <td class="">{{ $data->netral_sentiment }}</td>
+                                            <td class="">{{ $data->negatif_sentiment }}</td>
                                             <td class="">{{ $data->positive_labels + $data->netral_labels + $data->negative_labels }}</td>
                                             <td class="">
                                                 <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteDataModal{{ $data->id }}">Delete Data</button>

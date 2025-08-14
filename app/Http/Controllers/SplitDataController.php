@@ -42,8 +42,8 @@ class SplitDataController extends Controller
         $trainingInsert = [];
         foreach ($trainData as $item) {
             $trainingInsert[] = [
-                'real_text'  => $item['full_text'],
-                'clean_text' => $item['processed_text'],
+                'real_text'  => $item['real_text'],
+                'clean_text' => $item['clean_text'],
                 'sentiment'  => $item['sentiment'],
             ];
         }
@@ -51,8 +51,8 @@ class SplitDataController extends Controller
         $testingInsert = [];
         foreach ($testData as $item) {
             $testingInsert[] = [
-                'real_text'  => $item['full_text'],
-                'clean_text' => $item['processed_text'],
+                'real_text'  => $item['real_text'],
+                'clean_text' => $item['clean_text'],
                 'sentiment'  => $item['sentiment'],
             ];
         }

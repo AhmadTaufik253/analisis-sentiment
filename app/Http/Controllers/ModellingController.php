@@ -65,10 +65,9 @@ class ModellingController extends Controller
         // Simpan informasi model ke DB
         Modelling::insert([
             'model_name' => $modelName,
-            'model_path' => 'models/' . $modelName,
-            'positive_labels' => $totalPositive,
-            'negative_labels' => $totalNegative,
-            'netral_labels'   => $totalNetral,
+            'positif_sentiment' => $totalPositive,
+            'negatif_sentiment' => $totalNegative,
+            'netral_sentiment'   => $totalNetral,
             'created_at' => now()
         ]);
 

@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('preprocessings', function (Blueprint $table) {
             $table->id();
-            $table->text('full_text');
-            $table->text('processed_text');
+            $table->text('real_text');
+            $table->text('clean_text');
             $table->timestamps();
         });
     }

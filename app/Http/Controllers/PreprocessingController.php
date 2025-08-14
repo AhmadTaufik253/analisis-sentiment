@@ -11,7 +11,7 @@ class PreprocessingController extends Controller
     // function index untuk memperoses load awal halaman
     public function index()
     {
-        $preprocessing_data = Preprocessing::select('full_text', 'processed_text')->get();
+        $preprocessing_data = Preprocessing::select('real_text', 'clean_text')->get();
         return view('preprocessing', compact('preprocessing_data'));
     }
 

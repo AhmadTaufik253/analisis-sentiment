@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('labelling', function (Blueprint $table) {
             $table->id();
-            $table->text('full_text')->nullable();
-            $table->text('processed_text')->nullable();
+            $table->text('real_text')->nullable();
+            $table->text('clean_text')->nullable();
             $table->string('sentiment', 10)->nullable();
             $table->timestamps();
         });

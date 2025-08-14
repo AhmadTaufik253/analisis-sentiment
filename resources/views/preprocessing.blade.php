@@ -75,8 +75,8 @@
                                 <tbody>
                                     @foreach ($preprocessing_data as $data)
                                         <tr>
-                                            <td class="">{{ $data->full_text }}</td>
-                                            <td class="">{{ $data->processed_text }}</td>
+                                            <td class="">{{ $data->real_text }}</td>
+                                            <td class="">{{ $data->clean_text }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>

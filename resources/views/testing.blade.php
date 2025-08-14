@@ -21,22 +21,10 @@
                                     <option hidden>-- Silahkan Pilih Model --</option>
                                     @foreach ($data_model as $model)
                                     @php
-                                        $totalLabels = $model->positive_labels + $model->negative_labels + $model->netral_labels;
+                                        $totalLabels = $model->positif_sentiment + $model->negatif_sentiment + $model->netral_sentiment;
                                     @endphp
-                                        <option value="{{ $totalLabels  }}, {{ $model->positive_labels }}, {{ $model->negative_labels }}, {{ $model->netral_labels }}, {{ $model->model_name }}">{{ $model->model_name }}</option>
+                                        <option value="{{ $totalLabels  }}, {{ $model->positif_sentiment }}, {{ $model->negatif_sentiment }}, {{ $model->netral_sentiment }}, {{ $model->model_name }}">{{ $model->model_name }}</option>
                                     @endforeach
-                                    {{-- @foreach ($models as $model)
-                                        <option value='{!! json_encode([
-                                            "total" => $model->total,
-                                            "positive" => $model->positive,
-                                            "negative" => $model->negative,
-                                            "netral" => $model->netral,
-                                            "name" => $model->model_name
-                                        ]) !!}'>
-                                            {{ $model->model_name }}
-                                        </option>
-                                    @endforeach --}}
-
                                 </select>
                             </div>
                         </div>
@@ -188,31 +176,5 @@
         document.getElementById("pengujianButton").disabled = false;
     }
 </script>
-
-{{-- <script>
-    function onchangeModel(value) {
-        if (!value) return;
-
-        // Ubah string JSON menjadi object JS
-        const data = JSON.parse(value);
-        console.log(data);
-
-        // Tampilkan di text
-        document.getElementById("text_total").innerHTML   = data.total;
-        document.getElementById("text_positif").innerHTML = data.positive;
-        document.getElementById("text_negatif").innerHTML = data.negative;
-        document.getElementById("text_netral").innerHTML  = data.netral;
-
-        // Isi ke hidden input
-        document.getElementById("namaModel").value        = data.name;
-        document.getElementById("jumlahSentimen").value   = data.total;
-        document.getElementById("trainingPositif").value  = data.positive;
-        document.getElementById("trainingNegatif").value  = data.negative;
-        document.getElementById("trainingNetral").value   = data.netral;
-
-        // Aktifkan tombol
-        document.getElementById("pengujianButton").disabled = false;
-    }
-</script> --}}
 
 @endsection

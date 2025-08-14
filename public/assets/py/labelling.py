@@ -23,7 +23,7 @@ cursor_sentiment_positive = mydb.cursor(buffered=True)
 cursor_sentiment_negative = mydb.cursor(buffered=True)
 
 # Query untuk mendapatkan data dari tabel proses
-query_data_clean = "SELECT id, full_text, processed_text FROM preprocessings"
+query_data_clean = "SELECT id, real_text, clean_text FROM preprocessings"
 cursor_data_clean.execute(query_data_clean)
 
 query_sentiment_positive = "SELECT id, kata FROM sentiment_positif"
@@ -38,7 +38,7 @@ data_sentiment_positive = cursor_sentiment_positive.fetchall()
 data_sentiment_negative = cursor_sentiment_negative.fetchall()
 
 # Membuat DataFrame dari data yang diambil
-df_clean = pd.DataFrame(data_clean, columns=['id', 'full_text', 'processed_text'])
+df_clean = pd.DataFrame(data_clean, columns=['id', 'real_text', 'clean_text'])
 df_positif = pd.DataFrame(data_sentiment_positive, columns=['id', 'kata'])
 df_negatif = pd.DataFrame(data_sentiment_negative, columns=['id', 'kata'])
 
@@ -60,19 +60,19 @@ def label_sentiment(text):
         return 'netral'
 
 # Melabeli data
-df_clean['sentiment'] = df_clean['processed_text'].apply(label_sentiment)
+df_clean['sentiment'] = df_clean['clean_text'].apply(label_sentiment)
 
 # Menyimpan hasil labeling kembali ke database
 for index, row in df_clean.iterrows():
     insert_query = """
-        INSERT INTO labelling (id, full_text, processed_text, sentiment) 
+        INSERT INTO labelling (id, real_text, clean_text, sentiment) 
         VALUES (%s, %s, %s, %s) 
         ON DUPLICATE KEY UPDATE 
-            full_text = VALUES(full_text), 
-            processed_text = VALUES(processed_text), 
+            real_text = VALUES(real_text), 
+            clean_text = VALUES(clean_text), 
             sentiment = VALUES(sentiment)
         """
-    cursor_data_clean.execute(insert_query, (row['id'], row['full_text'], row['processed_text'], row['sentiment']))
+    cursor_data_clean.execute(insert_query, (row['id'], row['real_text'], row['clean_text'], row['sentiment']))
 
 
 # Commit perubahan ke database

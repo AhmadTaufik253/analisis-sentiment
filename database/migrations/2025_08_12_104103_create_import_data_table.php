@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('raw_data', function (Blueprint $table) {
             $table->id();
             $table->string('conversation_id_str')->nullable();
-            $table->string('created_at')->nullable(); // waktu tweet dibuat
+            $table->string('created_at')->nullable();
             $table->integer('favorite_count')->nullable();
-            $table->text('full_text')->nullable(); // isi tweet
+            $table->text('full_text')->nullable();
             $table->string('id_str')->nullable();
             $table->string('image_url')->nullable();
             $table->string('in_reply_to_screen_name')->nullable();

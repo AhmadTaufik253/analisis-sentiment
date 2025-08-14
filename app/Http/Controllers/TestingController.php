@@ -15,7 +15,7 @@ class TestingController extends Controller
 {
     public function index()
     {
-        $data_model = Modelling::select('model_name', 'positive_labels', 'negative_labels', 'netral_labels')->get();
+        $data_model = Modelling::select('model_name', 'positif_sentiment', 'negatif_sentiment', 'netral_sentiment')->get();
         $total_data_testing = Testing::count();
         return view('testing', compact('data_model','total_data_testing'));
     }

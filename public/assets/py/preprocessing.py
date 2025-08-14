@@ -62,7 +62,7 @@ for record in raw_texts:
         batch_data.append((original_text, text))
 
 # Memasukkan teks yang telah diproses ke basis data secara batch
-insert_query = "INSERT INTO preprocessings (full_text, processed_text) VALUES (%s, %s)"
+insert_query = "INSERT INTO preprocessings (real_text, clean_text) VALUES (%s, %s)"
 cursor.executemany(insert_query, batch_data)
 mydb.commit()
 

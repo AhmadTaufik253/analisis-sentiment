@@ -14,10 +14,9 @@ return new class extends Migration
         Schema::create('modelling', function (Blueprint $table) {
             $table->id();
             $table->string('model_name', 50);
-            $table->string('model_path', 50);
-            $table->integer('positive_labels');
-            $table->integer('negative_labels');
-            $table->integer('netral_labels');
+            $table->integer('positif_sentiment');
+            $table->integer('netral_sentiment');
+            $table->integer('negatif_sentiment');
             $table->dateTime('created_at');
         });
     }
