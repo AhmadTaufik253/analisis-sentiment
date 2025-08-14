@@ -60,7 +60,7 @@
                                             <td class="">{{ $data->positif_sentiment }}</td>
                                             <td class="">{{ $data->netral_sentiment }}</td>
                                             <td class="">{{ $data->negatif_sentiment }}</td>
-                                            <td class="">{{ $data->positive_labels + $data->netral_labels + $data->negative_labels }}</td>
+                                            <td class="">{{ $data->positif_sentiment + $data->netral_sentiment + $data->negatif_sentiment }}</td>
                                             <td class="">
                                                 <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteDataModal{{ $data->id }}">Delete Data</button>
                                                 <div class="modal fade" id="DeleteDataModal{{ $data->id }}" tabindex="-1" aria-labelledby="DeleteDataModalTitle" style="display: none;" aria-hidden="true">

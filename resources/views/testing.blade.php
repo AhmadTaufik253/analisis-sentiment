@@ -37,14 +37,11 @@
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
                                 <div class="widget-stats-icon widget-stats-icon-primary">
-                                    <i class="material-icons-outlined">paid</i>
+                                    <i class="material-icons-outlined">assignment_turned_in</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
                                     <span class="widget-stats-title">Total Data Testing</span>
                                     <span class="widget-stats-amount">{{ $total_data_testing }}</span>
-                                </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-negative align-self-start">
-                                    <i class="material-icons">keyboard_arrow_down</i> 4%
                                 </div>
                             </div>
                         </div>
@@ -55,14 +52,11 @@
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
                                 <div class="widget-stats-icon widget-stats-icon-primary">
-                                    <i class="material-icons-outlined">paid</i>
+                                    <i class="material-symbols-outlined">modeling</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
-                                    <span class="widget-stats-title">Total Raw Data</span>
+                                    <span class="widget-stats-title">Total Data Training</span>
                                     <span class="widget-stats-amount" id="text_total">0</span>
-                                </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-negative align-self-start">
-                                    <i class="material-icons">keyboard_arrow_down</i> 4%
                                 </div>
                             </div>
                         </div>
@@ -74,16 +68,13 @@
                     <div class="card widget widget-stats">
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
-                                <div class="widget-stats-icon widget-stats-icon-primary">
-                                    <i class="material-icons-outlined">paid</i>
+                                <div class="widget-stats-icon widget-stats-icon-success">
+                                    <i class="material-icons-outlined">label</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
                                     <span class="widget-stats-title">Total Sentiment Positif</span>
                                     <span class="widget-stats-amount" id="text_positif">0</span>
                                 </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-negative align-self-start">
-                                    <i class="material-icons">keyboard_arrow_down</i> 4%
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -92,16 +83,13 @@
                     <div class="card widget widget-stats">
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
-                                <div class="widget-stats-icon widget-stats-icon-primary">
-                                    <i class="material-icons-outlined">paid</i>
+                                <div class="widget-stats-icon widget-stats-icon-warning">
+                                    <i class="material-icons-outlined">label</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
                                     <span class="widget-stats-title">Total Sentiment Netral</span>
                                     <span class="widget-stats-amount" id="text_netral">0</span>
                                 </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-negative align-self-start">
-                                    <i class="material-icons">keyboard_arrow_down</i> 4%
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -110,15 +98,12 @@
                     <div class="card widget widget-stats">
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
-                                <div class="widget-stats-icon widget-stats-icon-primary">
-                                    <i class="material-icons-outlined">paid</i>
+                                <div class="widget-stats-icon widget-stats-icon-danger">
+                                    <i class="material-icons-outlined">label</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
                                     <span class="widget-stats-title">Total Sentiment Negatif</span>
                                     <span class="widget-stats-amount" id="text_negatif">0</span>
-                                </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-negative align-self-start">
-                                    <i class="material-icons">keyboard_arrow_down</i> 4%
                                 </div>
                             </div>
                         </div>
@@ -127,7 +112,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <button type="button" id="pengujianButton" class="btn btn-primary w-100" style="width: 100%" data-bs-toggle="modal" data-bs-target="#TestingDataModal">Mulai Pengujian</button>
+                    <button type="button" id="pengujianButton" class="btn btn-primary w-100" style="width: 100%" data-bs-toggle="modal" data-bs-target="#TestingDataModal" disabled>Mulai Pengujian</button>
                 </div>
             </div>
             <div class="modal fade" id="TestingDataModal" tabindex="-1" aria-labelledby="TestingDataModalTitle" style="display: none;" aria-hidden="true">

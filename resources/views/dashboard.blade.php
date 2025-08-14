@@ -17,14 +17,11 @@
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
                                 <div class="widget-stats-icon widget-stats-icon-primary">
-                                    <i class="material-icons-outlined">paid</i>
+                                    <i class="material-icons-outlined">save_alt</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
                                     <span class="widget-stats-title">Total Raw Data</span>
                                     <span class="widget-stats-amount">{{ $totalRawData }}</span>
-                                </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-negative align-self-start">
-                                    <i class="material-icons">keyboard_arrow_down</i> 4%
                                 </div>
                             </div>
                         </div>
@@ -35,14 +32,11 @@
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
                                 <div class="widget-stats-icon widget-stats-icon-warning">
-                                    <i class="material-icons-outlined">person</i>
+                                    <i class="material-icons-outlined">label</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
                                     <span class="widget-stats-title">Total Preprocessing Data</span>
                                     <span class="widget-stats-amount">{{ $totalPreprocessingData }}</span>
-                                </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-positive align-self-start">
-                                    <i class="material-icons">keyboard_arrow_up</i> 12%
                                 </div>
                             </div>
                         </div>
@@ -59,16 +53,13 @@
                                     <span class="widget-stats-title">Total Labelling Data</span>
                                     <span class="widget-stats-amount">{{ $totalLabellingData }}</span>
                                 </div>
-                                <div class="widget-stats-indicator widget-stats-indicator-positive align-self-start">
-                                    <i class="material-icons">keyboard_arrow_up</i> 7%
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
                             <h5 class="card-title">Label Sentiment Chart</h5>
