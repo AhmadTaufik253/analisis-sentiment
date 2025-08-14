@@ -32,7 +32,7 @@
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
                                 <div class="widget-stats-icon widget-stats-icon-warning">
-                                    <i class="material-icons-outlined">label</i>
+                                    <i class="material-icons-outlined">sync</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
                                     <span class="widget-stats-title">Total Preprocessing Data</span>
@@ -47,7 +47,7 @@
                         <div class="card-body">
                             <div class="widget-stats-container d-flex">
                                 <div class="widget-stats-icon widget-stats-icon-danger">
-                                    <i class="material-icons-outlined">file_download</i>
+                                    <i class="material-icons-outlined">label</i>
                                 </div>
                                 <div class="widget-stats-content flex-fill">
                                     <span class="widget-stats-title">Total Labelling Data</span>
