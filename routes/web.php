@@ -22,7 +22,7 @@ use App\Http\Controllers\VisualisasiController;
 |
 */
 
-Route::redirect('/','/login');
+Route::redirect('/','/dashboard');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/dashboard-chart-data', [DashboardController::class, 'chartData'])->name('dashboard.chart-data');
 
