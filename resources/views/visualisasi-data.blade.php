@@ -173,37 +173,6 @@
                             <small class="text-muted d-block">Semakin gelap = jumlah lebih besar.</small>
                         </div>
                     </div>
-
-                    {{-- Contoh Prediksi --}}
-                    {{-- <div class="card shadow-sm mt-3 mb-5">
-                        <div class="card-header bg-white fw-semibold">Contoh Prediksi (Sampel)</div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered">
-                                    <thead class="table-light">
-                                        <tr>
-                                            <th style="width:5%">#</th>
-                                            <th style="width:55%">Teks</th>
-                                            <th style="width:20%">Label Asli</th>
-                                            <th style="width:20%">Prediksi</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach($samples as $idx => $s)
-                                            @php $ok = $s['true'] === $s['pred']; @endphp
-                                            <tr class="{{ $ok ? 'table-success' : 'table-danger' }}">
-                                                <td>{{ $idx+1 }}</td>
-                                                <td>{{ $s['text'] }}</td>
-                                                <td>{{ $s['true'] }}</td>
-                                                <td>{{ $s['pred'] }}</td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </div>
-                            <small class="text-muted">Baris hijau = prediksi benar, merah = salah.</small>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>
@@ -221,22 +190,6 @@
     const perClassRecall = @json($perClass['recall']);
     const perClassF1 = @json($perClass['f1']);
 
-    // Doughnut Distribusi
-    // new Chart(document.getElementById('distChart'), {
-    //     type: 'doughnut',
-    //     data: {
-    //         labels: distLabels,
-    //         datasets: [{
-    //             data: distValues,
-    //             backgroundColor: ['#198754','#ffc107','#dc3545']
-    //         }]
-    //     },
-    //     options: {
-    //         responsive: true,
-    //         maintainAspectRatio: false,
-    //         plugins: { legend: { position: 'bottom' } }
-    //     }
-    // });
     new Chart(document.getElementById("distChart"), {
         type: "doughnut",
         data: {
